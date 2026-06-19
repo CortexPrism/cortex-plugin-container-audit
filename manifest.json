@@ -1,0 +1,26 @@
+{
+  "name": "cortex-plugin-container-audit",
+  "version": "1.0.0",
+  "description": "Container Image Auditor — Scan Docker/OCI images for vulnerabilities, outdated base images, and size optimization",
+  "kind": "esm",
+  "entryPoint": "mod.ts",
+  "runtime": "deno",
+  "author": "CortexPrism",
+  "license": "MIT",
+  "repository": "https://github.com/CortexPrism/cortex-plugin-container-audit",
+  "homepage": "https://cortexprism.io/marketplace/plugins/container-audit",
+  "capabilities": ["tools", "network:fetch"],
+  "tools": [
+    { "name": "container_scan", "description": "Scan image for vulnerabilities", "params": [] },
+    { "name": "container_list_images", "description": "List images in registry", "params": [] },
+    {
+      "name": "container_optimize",
+      "description": "Get Dockerfile optimization recommendations",
+      "params": []
+    },
+    { "name": "container_rebuild", "description": "Trigger secure rebuild of image", "params": [] }
+  ],
+  "dependencies": {},
+  "peerDependencies": { "cortex": ">=1.0.0" },
+  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+}
